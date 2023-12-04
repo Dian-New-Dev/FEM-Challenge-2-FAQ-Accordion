@@ -1,7 +1,6 @@
 const questions = document.getElementsByClassName('question');
 const answers = document.querySelectorAll('p')
 const closeButtons = document.getElementsByClassName('plusSignImg')
-console.log(closeButtons)
 
 
 for (let i = 0; i < questions.length; i++) {
@@ -53,3 +52,6 @@ function switchPlusSignBack(button) {
 function switchPlusSign(button) {
     button.setAttribute('src', 'assets/images/icon-minus.svg' )
 }
+
+export {showAnswer, highlightQuestion, questionBackToNormal, hideAnswer, switchPlusSignBack,
+        switchPlusSign}
