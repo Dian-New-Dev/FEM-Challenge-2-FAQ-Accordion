@@ -32,11 +32,11 @@ function showAnswer (answer) {
 }
 
 function highlightQuestion (question) {
-    question.classList.add("mouseover");
+    question.setAttribute('id', "mouseover");
 }
 
 function questionBackToNormal (question) {
-    question.classList.remove("mouseover");
+    question.id = null;
 
 }
 

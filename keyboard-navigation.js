@@ -22,18 +22,25 @@ function navigateWithArrows (keyPressed) {
     if (selectedQuestion.length === 0) {
         highlightQuestion(h2Elements[0])
     } else if  (selectedQuestion.length !== 0) {
-        const selected = document.getElementsByClassName('mouseover')
-        console.log(selected)
-        console.log(selected.nextElementSibling)
+        const selected = document.getElementById('mouseover')
+        for (let i = 0; i < h2Elements.length; i++) {
+            if (selected === h2Elements[i]) {
+                questionBackToNormal(h2Elements[i])
+                highlightQuestion(h2Elements[i+1])
+                break
+            }
+        }
+        }
+        
+        
+        
         
 
-    }
-        
     }
     
 
 
 
 function hasMouseOver (value, index, array) {
-    return value.classList.contains('mouseover')
+    return value.id === 'mouseover';
 }
