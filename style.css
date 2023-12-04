@@ -115,9 +115,6 @@ p {
     height: 100px;
 }
 
-#titleWrapper div {
-}
-
 #starSign {
     width: 10%;
 
@@ -146,14 +143,6 @@ p {
     #FEM-FAQ {
         width: 375px;
         border-radius: 10px;
-    }
-    
-    #starSign {
-        
-    }
-
-    #title {
-
     }
 }
 
