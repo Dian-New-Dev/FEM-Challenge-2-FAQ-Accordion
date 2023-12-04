@@ -1,19 +1,35 @@
 const questions = document.getElementsByClassName('question');
-console.log(questions);
 
-for (let x of questions) {
-    const texToAlter = x.querySelector('h2');
-    x.addEventListener('mouseenter', function (e) {
-        texToAlter.classList.add("mouseover");
+const answers = document.querySelectorAll('p')
+
+
+for (let i = 0; i < questions.length; i++) {
+    
+    const texToAlter = questions[i].querySelector('h2');
+
+    questions[i].addEventListener('mouseenter', function () {
+        highlightQuestion(texToAlter)
     })
-    x.addEventListener('mouseleave', function(e) {
-        console.log(e)
-        texToAlter.classList.remove("mouseover");
+    questions[i].addEventListener('mouseleave', function() {
+        questionBackToNormal(texToAlter)
 
+    })
+    questions[i].addEventListener('click', function(e) {
+        showAnswer(answers[i])
     })
 
 }
 
 function showAnswer (answer) {
+    answer.style.display = 'block';
+
+}
+
+function highlightQuestion (question) {
+    question.classList.add("mouseover");
+}
+
+function questionBackToNormal (question) {
+    question.classList.remove("mouseover");
 
 }
