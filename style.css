@@ -86,6 +86,12 @@ p {
     color: hsl(228, 45%, 44%);
 }
 
+.mouseover {
+    color: #ad28eb;
+    cursor: pointer;
+    
+}
+
 
 
 /** layout inside FAQ panel **/
