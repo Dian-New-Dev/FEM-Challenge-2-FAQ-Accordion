@@ -86,8 +86,11 @@ document.addEventListener('keydown', function (e) {
         const style = window.getComputedStyle(answers[ans]);
         if (style.display === 'none') {
             showAnswer(answers[ans])
+            switchPlusSign(closeButtons[ans])
+
         } else if (style.display === 'block') {
             hideAnswer(answers[ans])
+            switchPlusSignBack(closeButtons[ans])
         }
                 
                     
